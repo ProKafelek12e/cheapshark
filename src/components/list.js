@@ -8,7 +8,7 @@ export default function List() {
     useEffect(()=>{
         const getDeals = async ()=>{
             try{
-                const response = await fetch('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15')
+                const response = await fetch('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15&pageSize=1000')
                 const games = await response.json()
                 console.log(games)
                 setDeals(games)
